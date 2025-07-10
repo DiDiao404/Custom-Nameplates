@@ -27,6 +27,9 @@ jobs:
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@v1
       
+      - name: Add execute permission to gradlew
+        run: chmod +x ./gradlew  # 关键步骤：赋予gradlew执行权限
+      
       - name: Build with Gradle
         run: ./gradlew build
       
